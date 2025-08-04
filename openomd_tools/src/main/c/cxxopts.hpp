@@ -33,6 +33,7 @@ THE SOFTWARE.
 #include <memory>
 #include <regex>
 #include <sstream>
+#include <limits>
 #include <string>
 #include <unordered_map>
 #include <unordered_set>

@@ -1,0 +1,23 @@
+FROM alpine:3.18
+
+# Install build dependencies
+RUN apk add --no-cache \
+    build-base \
+    cmake \
+    flex \
+    bison \
+    wget \
+    openjdk11-jre-headless \
+    linux-headers
+
+# Set working directory
+WORKDIR /workspace
+
+# Copy source code
+COPY . .
+
+# Build the project
+RUN ./build.sh
+
+# Set default command
+CMD ["./install/bin/openomd_tools"]

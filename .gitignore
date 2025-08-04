@@ -1,25 +1,52 @@
+# Maven build
 target/
+
+# CMake build
+build/
+install/
+third_party/install/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+!*Config.cmake
+!*config.cmake.in
+
+# Visual Studio
 Debug/
 Release/
 x64/
-/config/
-/data/
-*.pb.cc
-*.pb.h
-*.slice.cpp
-*.slice.h
 *.sdf
 *.opendb
 *.db
 *.suo
 *.user
+*.vsp
+.vs/
+
+# IDE
+.cproject
+.project
+.vscode/
+.idea/
+
+# Logs and temp files
 *.log
 *.bak
 *.press
-*.vsp
+*.tmp
 *.pyc
+
+# Generated files
+*.pb.cc
+*.pb.h
+*.slice.cpp
+*.slice.h
 clover.xml
 packages.config
-.vs/
-.cproject
-.project
+
+# Data and config
+/config/
+/data/

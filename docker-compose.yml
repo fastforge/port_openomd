@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  openomd-ubuntu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    container_name: openomd-ubuntu-amd64
+    volumes:
+      - ./data:/workspace/data:ro
+
+  openomd-ubuntu-arm64:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/arm64
+    container_name: openomd-ubuntu-arm64
+    volumes:
+      - ./data:/workspace/data:ro
+
+  openomd-alpine:
+    build:
+      context: .
+      dockerfile: Dockerfile.alpine
+    platform: linux/amd64
+    container_name: openomd-alpine-amd64
+    volumes:
+      - ./data:/workspace/data:ro
+
+  openomd-alpine-arm64:
+    build:
+      context: .
+      dockerfile: Dockerfile.alpine
+    platform: linux/arm64
+    container_name: openomd-alpine-arm64
+    volumes:
+      - ./data:/workspace/data:ro
