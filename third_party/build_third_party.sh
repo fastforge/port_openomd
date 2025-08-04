@@ -12,6 +12,7 @@ mkdir -p ${INSTALL_PREFIX}/{include,lib,bin}
 
 # Download and build Boost
 echo "Building Boost..."
+mkdir -p ${THIRD_PARTY_DIR}/boost
 cd ${THIRD_PARTY_DIR}/boost
 if [ ! -d "boost_1_68_0" ]; then
     echo "Downloading Boost 1.68.0..."
