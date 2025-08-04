@@ -10,11 +10,14 @@ echo "Install prefix: ${INSTALL_PREFIX}"
 
 mkdir -p ${INSTALL_PREFIX}/{include,lib,bin}
 
-# Extract and build Boost
+# Download and build Boost
 echo "Building Boost..."
 cd ${THIRD_PARTY_DIR}/boost
 if [ ! -d "boost_1_68_0" ]; then
+    echo "Downloading Boost 1.68.0..."
+    wget -O boost_1_68_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.68.0/boost_1_68_0.tar.gz/download
     tar -xzf boost_1_68_0.tar.gz
+    rm boost_1_68_0.tar.gz
 fi
 cd boost_1_68_0
 if [ ! -f b2 ]; then
